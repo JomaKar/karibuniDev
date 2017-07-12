@@ -1,0 +1,23 @@
+.itemGallery {
+  position: relative;
+  margin-bottom: 20px; }
+  .itemGallery .hoverGalleryTxt {
+    display: none;
+    position: absolute; }
+  .itemGallery .itemGalleryAnchor {
+    width: 100%;
+    height: 100%;
+    display: block;
+    visibility: hidden;
+    text-decoration: none !important;
+    color: black;
+    text-align: center;
+    font-size: 33px;
+    padding-top: 27%; }
+  .itemGallery:hover .itemGalleryAnchor {
+    background-color: rgba(255, 255, 255, 0.7);
+    visibility: visible; }
+  .itemGallery:hover .hoverGalleryTxt {
+    display: block; }
+
+/*# sourceMappingURL=gallery.css.map */

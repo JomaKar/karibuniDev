@@ -1,0 +1,125 @@
+<div class="carouselContainer">
+	<ul class="locationCarousel" #fullImgList>
+		<li *ngFor="let img of images; let i = index" class="imgCarouselItm col-xs-12 noPadding" [widthSetter]="itmWidth">
+			<div class="carouselImg backImg" [backImg]="imgStamp + img" [itemHeightGallery]="i"></div>
+		</li>
+	</ul>
+</div>
+<div class="infoContainer">
+	<h2 class="locationsDetailsTitle"> {{locationInfo.name}} </h2>
+
+	<div class="col-xs-12 locationAbstract noPadding">
+		{{locationInfo.description}}
+	</div>
+
+	<div class="col-xs-12 col-sm-4 infoDetailSection NoleftP productionTechnichDetails">
+		<p class="productionInfo locationSubsectionTitle">
+			Productions details
+		</p>
+		<div class="row-fluid prodDetRow">
+			<div class="col-xs-12 detailsIconSection prodDetIconsSect wifiDetail">
+				<span class="iconElement wifiDetIcon">
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+				</span>
+				<span class="valueElement wifiDetVal">
+					<janein-icon [ja]="productionInfo.wifi"></janein-icon>
+				</span>
+			</div>
+			<div class="col-xs-12 detailsIconSection prodDetIconsSect electricityDetail">
+				<span class="iconElement elecDetIcon">
+					<i class="fa fa-bolt" aria-hidden="true"></i>
+				</span>
+				<span class="valueElement elecDetVal">
+					{{productionInfo.electricity}} AMP
+				</span>
+			</div>
+			<div class="col-xs-12 detailsIconSection prodDetIconsSect wcDetail">
+				<span class="iconElement wcDetIcon">
+					<wc-icon></wc-icon>
+				</span>
+				<span class="valueElement wcDetVal">
+					<janein-icon [ja]="productionInfo.toilets"></janein-icon>
+				</span>
+			</div>
+			<div class="col-xs-12 detailsIconSection prodDetIconsSect waterDetail">
+				<span class="iconElement waterDetIcon">
+					<i class="fa fa-tint" aria-hidden="true"></i>
+				</span>
+				<span class="valueElement waterDetVal">
+					<janein-icon [ja]="productionInfo.water"></janein-icon>
+				</span>
+			</div>
+			<div class="col-xs-12 detailsIconSection prodDetIconsSect costumDetail">
+				<span class="iconElement costumDetIcon">
+					<costume-icon></costume-icon>
+				</span>
+				<span class="valueElement costumDetVal">
+					<janein-icon [ja]="productionInfo.costume"></janein-icon>
+				</span>
+			</div>
+			<div class="col-xs-12 detailsIconSection prodDetIconsSect makeUpDetail">
+				<span class="iconElement makeUpDetIcon">
+					<makeup-icon></makeup-icon>
+				</span>
+				<span class="valueElement makeUpDetVal">
+					<janein-icon [ja]="productionInfo.makeup"></janein-icon>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-4 infoDetailSection">
+		<p class="placeInfo locationSubsectionTitle">
+			Space details
+		</p>
+		<div class="row-fluid placeDetRow">
+			<div class="col-xs-12 detailsIconSection placeDetIconsSect dirDetail">
+				<span class="iconElement dirDetIcon">
+					<i class="fa fa-compass" aria-hidden="true"></i>
+				</span>
+				<span class="valueElement dirDetVal">
+					{{locationInfo.orientation}}
+				</span>
+			</div>
+			<div class="col-xs-12 detailsIconSection placeDetIconsSect floorDetail">
+				<span class="iconElement floorDetIcon">
+					<floor-icon></floor-icon>
+				</span>
+				<span class="valueElement floorDetVal">
+					Floor No.{{locationInfo.floor}}
+				</span>
+			</div>
+			<div class="col-xs-12 detailsIconSection placeDetIconsSect mtsDetail">
+				<span class="iconElement mtsDetIcon">
+					<i class="fa fa-arrows-alt" aria-hidden="true"></i>
+				</span>
+				<span class="valueElement mtsDetVal">
+					{{locationInfo.squareMeters}}m2
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-4 infoDetailSection NorightP">
+		<p class="parkInfo locationSubsectionTitle">
+			Parking details
+		</p>
+		<div class="parkDetRow row-fluid">
+			<div class="col-xs-12 detailsIconSection parkDetIconsSect distDetail">
+				<span class="iconElement distDetIcon">
+					<distance-icon></distance-icon>
+				</span>
+				<span class="valueElement distDetVal">
+					{{parkingInfo.distance}}m to Set
+				</span>
+			</div>
+			<div class="col-xs-12 detailsIconSection parkDetIconsSect sizeDetail">
+				<span class="iconElement sizeDetIcon">
+					<i class="fa fa-expand" aria-hidden="true"></i>
+				</span>
+				<span class="valueElement sizeDetVal">
+					{{parkingInfo.size}}m2
+				</span>
+			</div>
+		</div>
+	</div>
+
+</div>

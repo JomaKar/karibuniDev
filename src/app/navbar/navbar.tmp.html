@@ -1,0 +1,37 @@
+<nav class="navbar-inverse myNavBar" >
+	<div class="container-fluid">
+	<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" (click)="displayMenu()" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navToggle" aria-expanded="false">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a routerLink="/home" class="navbar-brand">
+				Karibuni
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navToggle" #navbarMenu>
+			<ul class="nav navbar-nav navbar-right" #menuList>
+				<li (click)="displayMenu()">
+					<a routerActiveLink="active" routerLink="/about">about</a>
+				</li>
+				<li (click)="displayMenu()">
+					<a routerActiveLink="active" routerLink="/locations">locations</a>
+				</li>
+				<li (click)="displayMenu()">
+					<a routerActiveLink="active" routerLink="/coworking">Coworking</a>
+				</li>
+				<li (click)="displayMenu()">
+					<a routerActiveLink="active" routerLink="/workshop">Workshop</a>
+				</li>
+				<li (click)="displayMenu()">
+					<a routerActiveLink="active" routerLink="/shop">Shop</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</nav>
